@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>NLP Prediction</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: #eef1f5;
+            text-align: center;
+            padding-top: 100px;
+        }
+        .form-box {
+            display: inline-block;
+            padding: 30px;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+        textarea {
+            width: 250px;
+            height: 80px;
+            margin: 10px 0;
+            padding: 10px;
+            border-radius: 6px;
+            border: 1px solid #ccc;
+            resize: none;
+        }
+        select, input[type="submit"] {
+            width: 250px;
+            padding: 10px;
+            border-radius: 6px;
+            border: 1px solid #ccc;
+            margin: 10px 0;
+        }
+        input[type="submit"] {
+            background-color: #4a90e2;
+            color: white;
+            border: none;
+        }
+        input[type="submit"]:hover {
+            background-color: #357ab8;
+        }
+    </style>
+</head>
+<body>
+    <div class="form-box">
+        <h2>NLP Classification</h2>
+        <form action="/nlp/predict" method="post">
+            <textarea name="text_input" placeholder="Enter your text here..."></textarea><br>
+            <select name="embedding">
+                <option value="tfidf">TF-IDF</option>
+                <option value="word2vec">Word2Vec</option>
+                <option value="NER">NER</option>
+
+            </select><br>
+            <input type="submit" value="Analyze">
+        </form>
+    </div>
+</body>
+</html>

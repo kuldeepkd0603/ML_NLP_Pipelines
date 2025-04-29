@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>ML Options</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: #eef1f5;
+            text-align: center;
+            padding-top: 100px;
+        }
+        .form-box {
+            display: inline-block;
+            padding: 30px;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+        input[type="submit"] {
+            padding: 10px 20px;
+            border: none;
+            background: #4a90e2;
+            color: white;
+            border-radius: 8px;
+            cursor: pointer;
+        }
+        input[type="submit"]:hover {
+            background: #357ab8;
+        }
+    </style>
+</head>
+<body>
+    <div class="form-box">
+        <h2>Select Machine Learning Task</h2>
+        <form action="/ml/select" method="post">
+            <input type="radio" name="ml_type" value="regression" required> Regression<br><br>
+            <input type="radio" name="ml_type" value="classification"> Classification<br><br>
+            <input type="submit" value="Continue">
+        </form>
+    </div>
+</body>
+</html>
